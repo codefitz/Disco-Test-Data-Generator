@@ -1,0 +1,32 @@
+{
+  "registrylisting": [
+    {
+      "endpoint": "ef2335d5089afc993497f99bf650b3be",
+      "query": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Some\\RegistryQuery",
+      "actual_query": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Some\\Registry\\Query",
+      "data_type": [
+        "REG_SZ",
+        "REG_MULTI_SZ",
+        null
+      ],
+      "key_type": [
+        "VALUE",
+        "VALUE",
+        "SUBKEY"
+      ],
+      "name": [
+        "One",
+        "Multi",
+        "InstallLocation"
+      ]
+    }
+  ],
+  "registryvalue": [
+    {
+      "actual_query": null,
+      "endpoint": "ef2335d5089afc993497f99bf650b3be",
+      "query": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion",
+      "value": "2020.3"
+    }
+  ]
+}

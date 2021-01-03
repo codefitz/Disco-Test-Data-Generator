@@ -1,0 +1,40 @@
+{
+  "patches": [
+    {
+      "os_type": "Windows",
+      "patch": "KB2882822"
+    },
+    {
+      "os_type": "Windows",
+      "patch": "KB2761217"
+    },
+    {
+      "os_type": "Windows",
+      "patch": "KB2744842"
+    },
+    {
+      "os_type": "Solaris",
+      "patch": "148006-01"
+    },
+    {
+      "os_type": "Solaris",
+      "patch": "147673-06"
+    },
+    {
+      "os_type": "Solaris",
+      "patch": "800216-01"
+    },
+    {
+      "os_type": "HP-UX",
+      "patch": "PHCO_33136 1.0"
+    },
+    {
+      "os_type": "HP-UX",
+      "patch": "PHCO_33142 1.0"
+    },
+    {
+      "os_type": "HP-UX",
+      "patch": "PHCO_33169 1.0"
+    }
+  ]
+}

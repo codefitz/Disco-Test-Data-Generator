@@ -1,0 +1,79 @@
+{
+  "listeningports": [
+    {
+      "connected_count": 35,
+      "endpoint": "3a6de8e78b05a9e7e957bc6774097f80",
+      "listening_count": 25,
+      "local_ip_addr": [
+        "0.0.0.0",
+        "127.0.0.1",
+        "127.168.1.9"
+      ],
+      "local_port": [
+        22,
+        8080,
+        25072
+      ],
+      "pid": [
+        null,
+        2910,
+        2963
+      ],
+      "protocol": [
+        "TCP",
+        "TCP",
+        "TCP"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "endpoint": "3a6de8e78b05a9e7e957bc6774097f80",
+      "state": [
+        "ESTABLISHED",
+        "TIME_WAIT",
+        "TIME_WAIT"
+      ],
+      "cmd": [
+        "ssh",
+        null,
+        null
+      ],
+      "pid": [
+        17694,
+        null,
+        null
+      ],
+      "uid": [
+        1000,
+        500,
+        500
+      ],
+      "protocol": [
+        "TCP",
+        "TCP",
+        "TCP"
+      ],
+      "local_port": [
+        22,
+        8080,
+        25072
+      ],
+      "local_ip_addr": [
+        "0.0.0.0",
+        "127.0.0.1",
+        "127.168.1.9"
+      ],
+      "remote_port": [
+        22,
+        443,
+        25072
+      ],
+      "remote_ip_addr": [
+        "192.168.1.18",
+        "127.0.0.1",
+        "10.10.73.73"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "commands": [
+    {
+      "cmd": [
+        "list of cmd strings..(1)",
+        "can also be..(2)",
+        null,
+        "values(4)"
+      ],
+      "endpoint": "3a6de8e78b05a9e7e957bc6774097f80",
+      "os_class": "UNIX",
+      "result": [
+        "list of args(1)",
+        "Must correspond to commands(2)",
+        "in the same order(3)",
+        "as above(4)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "wmiquery": [
+    {
+      "endpoint": "0669df0f031fb83e345267a96bbc6a",
+      "namespace": "root\\CIMV2",
+      "query": "SELECT Architecture,Availability,DeviceID,HealthState,Manufacturer,SerialNumber FROM Win32_Processor",
+      "returned_attributes": [
+        "Architecture",
+        "Availability",
+        "DeviceID",
+        "HealthState",
+        "Manufacturer",
+        "SerialNumber"
+      ]
+    }
+  ],
+  "wmi": [
+    {
+      "Architecture": 9,
+      "Availability": 3,
+      "DeviceID": "CPU0",
+      "HealthState": null,
+      "Manufacturer": "GenuineIntel",
+      "SerialNumber": null,
+      "endpoint": "0669df0f031fb83e345267a96bbc6a",
+      "query": "SELECT Architecture,Availability,DeviceID,HealthState,Manufacturer,SerialNumber FROM Win32_Processor"
+    }
+  ]
+}

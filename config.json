@@ -1,0 +1,1194 @@
+{
+  "additional_files": {
+    "endpointHashes": "endpoints.json",
+    "commands": "commands.json",
+    "files": "files.json",
+    "directories": "directories.json",
+    "patches": "patches.json",
+    "packages": "packages.json",
+    "registry": "registry.json",
+    "wmi": "wmi.json",
+    "networks": "networks.json",
+    "processes": "processes.json",
+    "services": "services.json",
+    "integrations": "integrations.json",
+    "hbaOptions": "hbas.json"
+  },
+  "endpoints": [
+    {
+      "cidr": "192.168.1.0/24"
+    },
+    {
+      "cidr": "192.168.10.0/24"
+    },
+    {
+      "address": "10.11.12.13"
+    }
+  ],
+  "netmasks": [
+    "255.255.255.0",
+    "255.255.0.0",
+    "255.255.255.255"
+  ],
+  "interface_ids": {
+    "UNIX": [
+      "eth",
+      "wlp"
+    ],
+    "Windows": [
+      "Ethernet ",
+      "Backup ",
+      "DB "
+    ],
+    "Unassigned": [
+      "lo",
+      "agg",
+      "br",
+      "fwd",
+      "vlan",
+      "vnet"
+    ]
+  },
+  "usernames": {
+    "UNIX": [
+      "root",
+      "tideway",
+      "apache",
+      "syslog",
+      "gdm",
+      "kernel",
+      "nobody",
+      "postfix",
+      "smmsp",
+      "sshd",
+      "daemon",
+      "sqluser",
+      "oracle",
+      "jboss",
+      "tomcat",
+      "remedy",
+      "service",
+      "bmc",
+      "netcfg",
+      "netadm",
+      "snapuser",
+      "admin",
+      "applmgr",
+      "badjenny",
+      "ldap",
+      "badbob",
+      "mail",
+      "websph",
+      "statd",
+      "wafitz",
+      "1000",
+      "999",
+      "500",
+      "100"
+    ],
+    "Windows": [
+      "NT AUTHORITY\\SYSTEM",
+      "Administrator",
+      "SERVICE\\tideway",
+      "NT SERVICE\\MSSQLSERVER",
+      "Window Manager\\DWM",
+      "TRVS\\BackupUser",
+      "TVRS\\sql",
+      "TVRS\\admin",
+      "NT VIRTUAL MACHINE\\74FD52E2",
+      "NT VIRTUAL MACHINE\\92C68B2F",
+      "NT VIRTUAL MACHINE\\E190CC14",
+      "NT VIRTUAL MACHINE\\CCAF684C",
+      "TPL.COM\\cluster",
+      "LOCAL\\Administrator",
+      "secretadmin",
+      "TVRS\\badbob",
+      "TVRS\\badjenny"
+    ]
+  },
+  "hosts": 1,
+  "os_class": [
+    "Windows",
+    "UNIX"
+  ],
+  "platforms": {
+    "UNIX": [
+      "Linux",
+      "Solaris",
+      "AIX",
+      "FreeBSD",
+      "HP-UX"
+    ],
+    "Windows": [
+      "Windows"
+    ],
+    "Embedded": [
+      "Linux"
+    ],
+    "Other": [
+      "Mainframe",
+      "VMware ESXi"
+    ],
+    "None": [
+      null
+    ]
+  },
+  "kernels": {
+    "Other": [
+      "VMware ESXi 6.0.0 build-4600944"
+    ],
+    "UNIX": [
+      "0.5.11-0.175.3.13.0.3.0",
+      "2.6.18-417.el5",
+      "2.6.18-418.el5",
+      "2.6.18-419.el5",
+      "2.6.32-358.56.1.el6.x86_64",
+      "2.6.32-431.17.1.el6.x86_64",
+      "2.6.32-504.12.2.el6.x86_64",
+      "2.6.32-504.16.2.el6.x86_64",
+      "2.6.32-573.22.1.el6.x86_64",
+      "2.6.32-573.7.1.el6.x86_64",
+      "2.6.32-642.1.1.el6.x86_64",
+      "2.6.32-642.11.1.el6.x86_64",
+      "2.6.32-642.13.1.el6.x86_64",
+      "2.6.35.13",
+      "2.6.36.4brcmarm",
+      "3.0.101-0.35-default",
+      "3.10.0-1127.19.1.el7.x86_64",
+      "3.10.0-229.el7.x86_64",
+      "3.10.0-327.10.1.el7.x86_64",
+      "3.10.0-327.el7.x86_64",
+      "3.10.0-514.10.2.el7.x86_64",
+      "3.10.0-514.2.2.el7.x86_64",
+      "3.10.0-514.6.1.el7.x86_64",
+      "3.10.0-693.21.1.el7.x86_64",
+      "3.10.0-862.14.4.el7.x86_64",
+      "3.14.35-28.38.amzn1.x86_64",
+      "4.2.0-42-generic",
+      "4.4.0-45-generic",
+      "4.4.0-66-generic",
+      "4.4.0-96-generic",
+      "4.4.35-33.55.amzn1.x86_64",
+      "5.0.0-31-generic",
+      "5.10 Generic_147147-26",
+      "5.10 Generic_150400-12",
+      "5.10 Generic_150400-40",
+      "5.3.0-46-generic",
+      "5.4.0-58-generic",
+      "5.8 Generic 117350-05 Jun 2004",
+      "5.8 Generic 117350-62 Mar 2009",
+      "5.9 Generic 122300-61 Oct 2011",
+      "64-bit",
+      "Isilon OneFS v7.2.1.1 B_7_2_1_081(RELEASE)",
+      null
+    ],
+    "Windows": [
+      "Multiprocessor Free",
+      "Uniprocessor Free",
+      "Multiprocessor Free 6.3.9600 N/A Build 9600",
+      null
+    ]
+  },
+  "hardware_vendors": [
+    "Dell Inc.",
+    "VMware, Inc.",
+    "Amazon",
+    "Xen",
+    "Oracle Corporation",
+    "Microsoft Corporation",
+    "Intel Corporation",
+    "IBM",
+    "innotek GmbH",
+    "Dell Computer Corporation",
+    "HP",
+    "Micro-Star International Co., Ltd.",
+    "VMware, Inc.",
+    "QLogic Corporation",
+    null
+  ],
+  "hardware_models": [
+    "090-000-215",
+    "7895-42X",
+    "7895-43X",
+    "8205-E6B",
+    "8205-E6C",
+    "8231-E2B",
+    "8233-E8B",
+    "9000/800/S16K-A",
+    "Amazon Virtual Machine",
+    "CX61 2QF",
+    "HVM domU",
+    "Oracle SPARC T4-1B",
+    "Oracle SPARC T5-1B",
+    "PowerEdge 1850",
+    "PowerEdge M420",
+    "PowerEdge M820",
+    "PowerEdge R510",
+    "PowerEdge R610",
+    "PowerEdge R630",
+    "PowerEdge R710",
+    "Sun Fire V120",
+    "Sun Fire V440",
+    "VMware Virtual Platform",
+    "Virtual Machine",
+    "VirtualBox",
+    "sun4v",
+    "PowerEdge M620",
+    "PowerEdge M630",
+    null
+  ],
+  "processor_types": [
+    "Intel(R) Pentium(R) III Xeon processor",
+    "Intel(R) Xeon(R) CPU E5-2407 v2 @ 2.40GHz",
+    "Intel(R) Xeon(R) CPU E5-2603 0 @ 1.80GHz",
+    "Intel(R) Xeon(R) CPU E5-2640 v2 @ 2.00GHz",
+    "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+    "Intel(R) Xeon(R) CPU E5-2698 v3 @ 2.30GHz",
+    "Intel(R) Xeon(R) CPU E5-4640 0 @ 2.40GHz",
+    "Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz",
+    "Intel(R) Xeon(R) CPU E5506 @ 2.13GHz",
+    "Intel(R) Xeon(R) CPU E5620 @ 2.40GHz",
+    "Intel(R) Xeon(R) CPU X5650 @ 2.67GHz",
+    "SPARC-T4 2848MHz",
+    null
+  ],
+  "hostname_prefixes": [
+    "trvs-",
+    "alpha-",
+    "beta-"
+  ],
+  "domains": [
+    "traversys.io",
+    "tpl.com"
+  ],
+  "access_methods": {
+    "UNIX": [
+      "ssh",
+      "snmp"
+    ],
+    "Windows": [
+      "rcmd",
+      "windows",
+      "snmp"
+    ],
+    "Other": [
+      "mainview",
+      "vcenter"
+    ],
+    "Embedded": [
+      "snmp",
+      null
+    ],
+    "None": [
+      "snmp"
+    ]
+  },
+  "file_systems": {
+    "Other": {
+      "comments": [
+        null
+      ],
+      "fs_kind": [
+        "LOCAL"
+      ],
+      "fs_type": [
+        "vmfs"
+      ]
+    },
+    "UNIX": {
+      "comments": [
+        "Public",
+        null
+      ],
+      "fs_kind": [
+        "LOCAL",
+        "REMOTE",
+        "EXPORTED"
+      ],
+      "fs_type": [
+        "btrfs",
+        "cifs",
+        "ctfs",
+        "dev",
+        "devfs",
+        "devtmpfs",
+        "ext2",
+        "ext3",
+        "ext4",
+        "nfs",
+        "nfs3",
+        "proc",
+        "procfs",
+        "tmpfs",
+        "vfat",
+        "zfs"
+      ]
+    },
+    "Windows": {
+      "comments": [
+        "Default Share",
+        "Remote Admin",
+        "Office",
+        "Printer",
+        "Event Logging",
+        null
+      ],
+      "fs_kind": [
+        "LOCAL",
+        "REMOTE",
+        "EXPORTED"
+      ],
+      "fs_type": [
+        "NTFS",
+        "cifs",
+        "ReFS"
+      ]
+    }
+  },
+  "os_info": {
+    "UNIX": [
+      {
+        "os": "CentOS Linux release 7.8.2003 (Core)",
+        "os_arch": "x86_64",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "CentOS Linux",
+        "os_vendor": "CentOS Project",
+        "os_version": "7.8.2003",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Linux 2.6.36.4brcmarm",
+        "os_arch": "armv7l",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "GNU/Linux",
+        "os_vendor": null,
+        "os_version": "2.6 Kernel",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "CentOS Linux release 7.5.1804 (Core)",
+        "os_arch": "x86_64",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "CentOS Linux",
+        "os_vendor": "CentOS Project",
+        "os_version": "7.5.1804",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Ubuntu 20.04.1 LTS",
+        "os_arch": "x86_64",
+        "os_build": "Focal Fossa",
+        "os_edition": null,
+        "os_type": "Ubuntu Linux",
+        "os_vendor": "Canonical",
+        "os_version": "20.04",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Ubuntu 19.04",
+        "os_arch": "x86_64",
+        "os_build": "Jaunty Jackalope",
+        "os_edition": null,
+        "os_type": "Ubuntu Linux",
+        "os_vendor": "Canonical",
+        "os_version": "9.04",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Ubuntu 19.10",
+        "os_arch": "x86_64",
+        "os_build": "Karmic Koala",
+        "os_edition": null,
+        "os_type": "Ubuntu Linux",
+        "os_vendor": "Canonical",
+        "os_version": "9.10",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Linux 2.6.35.13",
+        "os_arch": "armv6l",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "GNU/Linux",
+        "os_vendor": null,
+        "os_version": "2.6 Kernel",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Linux 3.10.105",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "GNU/Linux",
+        "os_vendor": null,
+        "os_version": "3.10.105",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "CentOS Linux release 7.4.1708 (Core)",
+        "os_arch": "x86_64",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "CentOS Linux",
+        "os_vendor": "CentOS Project",
+        "os_version": "7.4.1708",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Ubuntu 16.04.2 LTS",
+        "os_arch": "x86_64",
+        "os_build": "Xenial Xerus",
+        "os_edition": null,
+        "os_type": "Ubuntu Linux",
+        "os_vendor": "Canonical",
+        "os_version": "16.04",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Red Hat Enterprise Linux Server release 7.1 (Maipo)",
+        "os_arch": "x86_64",
+        "os_build": "Maipo",
+        "os_edition": "Server",
+        "os_type": "Red Hat Enterprise Linux",
+        "os_vendor": "Red Hat",
+        "os_version": "7.1",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Amazon Linux AMI release 2016.09",
+        "os_arch": "x86_64",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "Amazon Linux AMI",
+        "os_vendor": "Amazon",
+        "os_version": "2016.09",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Amazon Linux AMI release 2015.03",
+        "os_arch": "x86_64",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "Amazon Linux AMI",
+        "os_vendor": "Amazon",
+        "os_version": "2015.03",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Red Hat Enterprise Linux Server release 6.7 (Santiago)",
+        "os_arch": "x86_64",
+        "os_build": "Santiago",
+        "os_edition": "Server",
+        "os_type": "Red Hat Enterprise Linux",
+        "os_vendor": "Red Hat",
+        "os_version": "6.7",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Red Hat Enterprise Linux Server release 7.2 (Maipo)",
+        "os_arch": "x86_64",
+        "os_build": "Maipo",
+        "os_edition": "Server",
+        "os_type": "Red Hat Enterprise Linux",
+        "os_vendor": "Red Hat",
+        "os_version": "7.2",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Ubuntu 16.04.1 LTS",
+        "os_arch": "x86_64",
+        "os_build": "Xenial Xerus",
+        "os_edition": null,
+        "os_type": "Ubuntu Linux",
+        "os_vendor": "Canonical",
+        "os_version": "16.04",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "CentOS release 6.4 (Final)",
+        "os_arch": "x86_64",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "CentOS Linux",
+        "os_vendor": "CentOS Project",
+        "os_version": "6.4",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Red Hat Enterprise Linux Server release 6.6 (Santiago)",
+        "os_arch": "x86_64",
+        "os_build": "Santiago",
+        "os_edition": "Server",
+        "os_type": "Red Hat Enterprise Linux",
+        "os_vendor": "Red Hat",
+        "os_version": "6.6",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Ubuntu 16.04.3 LTS",
+        "os_arch": "x86_64",
+        "os_build": "Xenial Xerus",
+        "os_edition": null,
+        "os_type": "Ubuntu Linux",
+        "os_vendor": "Canonical",
+        "os_version": "16.04",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Oracle Solaris 10 1/13 s10s_u11wos_24a SPARC",
+        "os_arch": "sparcv9",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "Solaris",
+        "os_vendor": "Sun",
+        "os_version": "10",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "SUSE Linux Enterprise Server 11 (x86_64) VERSION = 11 PATCHLEVEL = 3",
+        "os_arch": "x86_64",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "SuSE Linux",
+        "os_vendor": "Novell",
+        "os_version": "11",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Ubuntu 14.04.5 LTS",
+        "os_arch": "x86_64",
+        "os_build": "Trusty Tahr",
+        "os_edition": null,
+        "os_type": "Ubuntu Linux",
+        "os_vendor": "Canonical",
+        "os_version": "14.04",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Red Hat Enterprise Linux Server release 5.11 (Tikanga)",
+        "os_arch": "x86_64",
+        "os_build": "Tikanga",
+        "os_edition": "Server",
+        "os_type": "Red Hat Enterprise Linux",
+        "os_vendor": "Red Hat",
+        "os_version": "5.11",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Red Hat Enterprise Linux Server release 6.8 (Santiago)",
+        "os_arch": "x86_64",
+        "os_build": "Santiago",
+        "os_edition": "Server",
+        "os_type": "Red Hat Enterprise Linux",
+        "os_vendor": "Red Hat",
+        "os_version": "6.8",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Red Hat Enterprise Linux Server release 6.9 (Santiago)",
+        "os_arch": "x86_64",
+        "os_build": "Santiago",
+        "os_edition": "Server",
+        "os_type": "Red Hat Enterprise Linux",
+        "os_vendor": "Red Hat",
+        "os_version": "6.9",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "CentOS release 6.8 (Final)",
+        "os_arch": "x86_64",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "CentOS Linux",
+        "os_vendor": "CentOS Project",
+        "os_version": "6.8",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Hitachi NAS Platform 12.7.4221.09",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "Hitachi NAS",
+        "os_vendor": "Hitachi",
+        "os_version": "12.7.4221.09",
+        "device_type": "Storage Infrastructure"
+      },
+      {
+        "os": "Red Hat Enterprise Linux Server release 7.3 (Maipo)",
+        "os_arch": "x86_64",
+        "os_build": "Maipo",
+        "os_edition": "Server",
+        "os_type": "Red Hat Enterprise Linux",
+        "os_vendor": "Red Hat",
+        "os_version": "7.3",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "AIX 6.1.0.0",
+        "os_arch": "powerpc",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "AIX",
+        "os_vendor": "IBM",
+        "os_version": "6.1",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "AIX 7.1.0.0",
+        "os_arch": "powerpc",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "AIX",
+        "os_vendor": "IBM",
+        "os_version": "7.1",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Solaris 9 9/05 HW s9s_u9wos_06b SPARC",
+        "os_arch": "sparcv9",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "Solaris",
+        "os_vendor": "Sun",
+        "os_class": "UNIX",
+        "os_version": "9",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Oracle Solaris 11.3.13.4.0",
+        "os_arch": "sparcv9",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "Solaris",
+        "os_vendor": "Oracle",
+        "os_version": "11.3",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Red Hat Enterprise Linux Server release 6.4 (Santiago)",
+        "os_arch": "x86_64",
+        "os_build": "Santiago",
+        "os_edition": "Server",
+        "os_type": "Red Hat Enterprise Linux",
+        "os_vendor": "Red Hat",
+        "os_version": "6.4",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Isilon OneFS v7.2.1.1",
+        "os_arch": "amd64",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "FreeBSD",
+        "os_vendor": "EMC",
+        "os_version": "7.2.1.1",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Red Hat Enterprise Linux Server release 6.5 (Santiago)",
+        "os_arch": "x86_64",
+        "os_build": "Santiago",
+        "os_edition": "Server",
+        "os_type": "Red Hat Enterprise Linux",
+        "os_vendor": "Red Hat",
+        "os_version": "6.5",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Solaris 8 2/04 s28s_hw4wos_05a SPARC",
+        "os_arch": "sparcv9",
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "Solaris",
+        "os_vendor": "Sun",
+        "os_version": "8",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "CentOS Linux release 7.3.1611 (Core)",
+        "os_arch": "x86_64",
+        "os_build": null,
+        "os_class": "UNIX",
+        "os_edition": null,
+        "os_type": "CentOS Linux",
+        "os_vendor": "CentOS Project",
+        "os_version": "7.3.1611",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Red Hat Enterprise Linux Server release 5.10 (Tikanga)",
+        "os_arch": "x86_64",
+        "os_build": "Tikanga",
+        "os_class": "UNIX",
+        "os_edition": "Server",
+        "os_type": "Red Hat Enterprise Linux",
+        "os_vendor": "Red Hat",
+        "os_version": "5.10",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Solaris 9 9/04 s9s_u7wos_09 SPARC",
+        "os_arch": "sparcv9",
+        "os_build": null,
+        "os_class": "UNIX",
+        "os_edition": null,
+        "os_type": "Solaris",
+        "os_vendor": "Sun",
+        "os_version": "9",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Solaris 8 2/02 s28s_u7wos_08a SPARC",
+        "os_arch": "sparcv9",
+        "os_build": null,
+        "os_class": "UNIX",
+        "os_edition": null,
+        "os_type": "Solaris",
+        "os_vendor": "Sun",
+        "os_version": "8",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "CentOS release 6.7 (Final)",
+        "os_arch": "x86_64",
+        "os_build": null,
+        "os_class": "UNIX",
+        "os_edition": null,
+        "os_type": "CentOS Linux",
+        "os_vendor": "CentOS Project",
+        "os_version": "6.7",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Red Hat Enterprise Linux Server release 5.9 (Tikanga)",
+        "os_arch": "x86_64",
+        "os_build": "Tikanga",
+        "os_class": "UNIX",
+        "os_edition": "Server",
+        "os_type": "Red Hat Enterprise Linux",
+        "os_vendor": "Red Hat",
+        "os_version": "5.9",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "Solaris 9 4/04 s9s_u6wos_08a SPARC",
+        "os_arch": "sparcv9",
+        "os_build": null,
+        "os_class": "UNIX",
+        "os_edition": null,
+        "os_type": "Solaris",
+        "os_vendor": "Sun",
+        "os_version": "9",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "HP-UX B.11.11",
+        "os_arch": "pa-risc 2.0w",
+        "os_build": null,
+        "os_class": "UNIX",
+        "os_edition": "v1",
+        "os_type": "HP-UX",
+        "os_vendor": "HP",
+        "os_version": "11i",
+        "device_type": "UNIX Server"
+      },
+      {
+        "os": "AIX 5.3.0.0",
+        "os_arch": "powerpc",
+        "os_build": null,
+        "os_class": "UNIX",
+        "os_edition": null,
+        "os_type": "AIX",
+        "os_vendor": "IBM",
+        "os_version": "5.3",
+        "device_type": "UNIX Server"
+      }
+    ],
+    "Windows": [
+      {
+        "os": "Microsoft Windows Server 2008 R2 Enterprise Version 6.1.7601 Build 7601",
+        "os_arch": "x86_64",
+        "os_build": "7601",
+        "os_edition": "Enterprise",
+        "os_type": "Windows",
+        "os_vendor": "Microsoft",
+        "os_version": "Server 2008 R2",
+        "device_type": "Windows Server"
+      },
+      {
+        "os": "Microsoft Windows Server 2012 Datacenter Version 6.2.9200 Build 9200",
+        "os_arch": "x86_64",
+        "os_build": "9200",
+        "os_edition": "Datacenter Edition",
+        "os_type": "Windows",
+        "os_vendor": "Microsoft",
+        "os_version": "Server 2012",
+        "device_type": "Windows Server"
+      },
+      {
+        "os": "Microsoft Windows Server 2008 R2 Datacenter Version 6.1.7601 Build 7601",
+        "os_arch": "x86_64",
+        "os_build": "7601",
+        "os_edition": "Datacenter",
+        "os_type": "Windows",
+        "os_vendor": "Microsoft",
+        "os_version": "Server 2008 R2",
+        "device_type": "Windows Server"
+      },
+      {
+        "os": "Microsoft Windows Server 2012 R2 Standard Version 6.3.9600 Build 9600",
+        "os_arch": "x86_64",
+        "os_build": "9600",
+        "os_edition": "Standard Edition",
+        "os_type": "Windows",
+        "os_vendor": "Microsoft",
+        "os_version": "Server 2012 R2",
+        "device_type": "Windows Server"
+      },
+      {
+        "os": "Microsoft Windows Server 2012 Standard Version 6.2.9200 Build 9200",
+        "os_arch": "x86_64",
+        "os_build": "9200",
+        "os_edition": "Standard Edition",
+        "os_type": "Windows",
+        "os_vendor": "Microsoft",
+        "os_version": "Server 2012",
+        "device_type": "Windows Server"
+      },
+      {
+        "os": "Microsoft Windows Server 2008 R2 Enterprise Version 6.1.7600 Build 7600",
+        "os_arch": "x86_64",
+        "os_build": "7600",
+        "os_edition": "Enterprise",
+        "os_type": "Windows",
+        "os_vendor": "Microsoft",
+        "os_version": "Server 2008 R2",
+        "device_type": "Windows Server"
+      },
+      {
+        "os": "Microsoft Windows Server 2016 Datacenter Version 10.0.14393 Build 14393",
+        "os_arch": "x86_64",
+        "os_build": "14393",
+        "os_edition": "Datacenter",
+        "os_type": "Windows",
+        "os_vendor": "Microsoft",
+        "os_version": "Server 2016",
+        "device_type": "Windows Server"
+      },
+      {
+        "os": "Windows Version 6.1 (Build 7600 Multiprocessor Free) Server",
+        "os_arch": null,
+        "os_build": "7600",
+        "os_edition": null,
+        "os_type": "Windows",
+        "os_vendor": "Microsoft",
+        "os_version": "Server 2008 R2",
+        "device_type": "Windows Server"
+      },
+      {
+        "os": "Microsoft® Windows Server® 2008 Enterprise Version 6.0.6002 Build 6002",
+        "os_arch": "x86_64",
+        "os_build": "6002",
+        "os_edition": "Enterprise Edition",
+        "os_type": "Windows",
+        "os_vendor": "Microsoft",
+        "os_version": "Server 2008",
+        "device_type": "Windows Server"
+      },
+      {
+        "os": "Windows Version 6.1 (Build 7601 Multiprocessor Free) Server",
+        "os_arch": null,
+        "os_build": "7601",
+        "os_edition": null,
+        "os_type": "Windows",
+        "os_vendor": "Microsoft",
+        "os_version": "Server 2008 R2",
+        "device_type": "Windows Server"
+      },
+      {
+        "os": "Microsoft Windows Server 2012 R2 Datacenter Version 6.3.9600 Build 9600",
+        "os_arch": "x86_64",
+        "os_build": "9600",
+        "os_edition": "Datacenter Edition",
+        "os_type": "Windows",
+        "os_vendor": "Microsoft",
+        "os_version": "Server 2012 R2",
+        "device_type": "Windows Server"
+      },
+      {
+        "os": "Microsoft Windows Server 2012 R2 Standard",
+        "os_arch": "x86_64",
+        "os_build": "9600",
+        "os_class": "Windows",
+        "os_edition": "Standard Edition",
+        "os_type": "Windows",
+        "os_vendor": "Microsoft",
+        "os_version": "Server 2012 R2",
+        "device_type": "Windows Server"
+      },
+      {
+        "os": "Microsoft Windows Server 2008 R2 Standard Version 6.1.7601 Build 7601",
+        "os_arch": "x86_64",
+        "os_build": "7601",
+        "os_class": "Windows",
+        "os_edition": "Standard",
+        "os_type": "Windows",
+        "os_vendor": "Microsoft",
+        "os_version": "Server 2008 R2",
+        "device_type": "Windows Server"
+      }
+    ],
+    "Other": [
+      {
+        "os": "z/OS",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "z/OS",
+        "os_vendor": "IBM",
+        "os_version": null,
+        "device_type": "Mainframe"
+      },
+      {
+        "os": "VMware ESXi vmnix-x86 6.0.0",
+        "os_arch": null,
+        "os_build": "4600944",
+        "os_class": "Other",
+        "os_edition": null,
+        "os_type": "VMware ESXi",
+        "os_vendor": "VMware",
+        "os_version": "6.0.0",
+        "device_type": "Hypervisor"
+      }
+    ],
+    "Embedded": [
+      {
+        "os": "Cisco NX-OS(tm) ucs, Software (ucs-6100-k9-system), Version 4.2(1)N1(1.43q), RELEASE SOFTWARE Copyright (c) 2002-2010 by Cisco Systems, Inc.",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "NX-OS",
+        "os_vendor": "Cisco Systems",
+        "os_version": "4.2(1)N1",
+        "device_type": "Network Infrastructure"
+      },
+      {
+        "os": "Linux 2.6.32-71.18.2.el6.f5.x86_64",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "TMOS",
+        "os_vendor": "F5 Networks",
+        "os_version": "11.1.0-1943.0-Final",
+        "device_type": "Load Balancer"
+      },
+      {
+        "os": "Xerox WorkCentre 7535 v1 Multifunction System; System Software 061.121.224.18803, ESS 061.124.18820.LL",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "Xerox",
+        "os_vendor": "Xerox",
+        "os_version": "061.121.224.18803",
+        "device_type": "Printer"
+      },
+      {
+        "os": "Data Domain OS 5.5.2.2-491486",
+        "os_arch": null,
+        "os_build": "491486",
+        "os_edition": null,
+        "os_type": "DD OS",
+        "os_vendor": "EMC",
+        "os_version": "5.5.2.2",
+        "device_type": "Storage Infrastructure"
+      },
+      {
+        "os": "NetApp Release 8.1.4P7 7-Mode",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "Data ONTAP",
+        "os_vendor": "NetApp",
+        "os_version": "8.1.4P7",
+        "device_type": "Storage Infrastructure"
+      },
+      {
+        "os": "NetApp Release 8.0.5 7-Mode",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "Data ONTAP",
+        "os_vendor": "NetApp",
+        "os_version": "8.0.5",
+        "device_type": "Storage Infrastructure"
+      },
+      {
+        "os": "Data Domain OS 5.5.4.10-536339",
+        "os_arch": null,
+        "os_build": "536339",
+        "os_edition": null,
+        "os_type": "DD OS",
+        "os_vendor": "EMC",
+        "os_version": "5.5.4.10",
+        "device_type": "Storage Infrastructure"
+      },
+      {
+        "os": "HP 3PAR Embedded SMI-S Provider",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "HP 3PAR Embedded SMI-S Provider",
+        "os_vendor": "HP",
+        "os_version": null,
+        "device_type": "Storage Infrastructure"
+      },
+      {
+        "os": "Linux 2.6.18-164.11.1.el5.1.0.f5app",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "TMOS",
+        "os_vendor": "F5 Networks",
+        "os_version": "10.2.4-866.0-Hotfix HF12",
+        "device_type": "Load Balancer"
+      },
+      {
+        "os": "Dell Networking OS Operating System Version: 2.0 Application Software Version: 9.10(0.1P10) Series: I/O-Aggregator",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "DNOS",
+        "os_vendor": "Dell",
+        "os_version": "9.10(0.1P10)",
+        "device_type": "Network Infrastructure"
+      },
+      {
+        "os": "NetApp Release 8.3.2",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "Data ONTAP",
+        "os_vendor": "NetApp",
+        "os_version": "8.3.2",
+        "device_type": "Storage Infrastructure"
+      },
+      {
+        "os": "HITACHI Gx00/G1000 Embedded SMI-S Provider",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "HITACHI Gx00/G1000 Embedded SMI-S Provider",
+        "os_vendor": "HITACHI",
+        "os_version": null,
+        "device_type": "Storage Infrastructure"
+      },
+      {
+        "os": "HITACHI Embedded SMI-S Provider",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "HITACHI Embedded SMI-S Provider",
+        "os_vendor": "HITACHI",
+        "os_version": null,
+        "device_type": "Storage Infrastructure"
+      },
+      {
+        "os": "Cisco NX-OS(tm) n6000, Software (n6000-uk9), Version 7.1(2)N1(1)",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "NX-OS",
+        "os_vendor": "Cisco Systems",
+        "os_version": "7.1(2)N1(1)",
+        "device_type": "Network Infrastructure"
+      },
+      {
+        "os": "Dell CMC",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "Dell CMC",
+        "os_vendor": null,
+        "os_version": null,
+        "device_type": "Chassis Management Controller"
+      },
+      {
+        "os": "IBM CIM Agent for the DS Open API",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "IBM CIM Agent for the DS Open API",
+        "os_vendor": "IBM",
+        "os_version": null,
+        "device_type": "Storage Infrastructure"
+      },
+      {
+        "os": "NetApp Release 7.3.3",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "Data ONTAP",
+        "os_vendor": "NetApp",
+        "os_version": "7.3.3",
+        "device_type": "Storage Infrastructure"
+      },
+      {
+        "os": "Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 7.0(8)N1(1)",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "NX-OS",
+        "os_vendor": "Cisco Systems",
+        "os_version": "7.0(8)N1(1)",
+        "device_type": "Network Infrastructure"
+      },
+      {
+        "os": "Fibre Channel Switch.",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "Fabric OS",
+        "os_vendor": "Brocade",
+        "os_version": "7.0.0c",
+        "device_type": "Network Infrastructure"
+      },
+      {
+        "os": "Linux 2.6.18-164.11.1.el5.1.0.f5app",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "TMOS",
+        "os_vendor": "F5 Networks",
+        "os_version": "10.2.4-866.0-Hotfix HF12",
+        "device_type": "Load Balancer"
+      },
+      {
+        "os": "Cisco NX-OS(tm) ucs, Software (ucs-6100-k9-system), Version 5.2(3)N2(2.23d)",
+        "os_arch": null,
+        "os_build": null,
+        "os_edition": null,
+        "os_type": "NX-OS",
+        "os_vendor": "Cisco Systems",
+        "os_version": "5.2(3)N2",
+        "device_type": "Network Infrastructure"
+      }
+    ],
+    "None": [
+      {
+        "os": "HP ETHERNET MULTI-ENVIRONMENT",
+        "os_arch": null,
+        "os_build": null,
+        "os_class": null,
+        "os_edition": null,
+        "os_type": null,
+        "os_vendor": null,
+        "os_version": null,
+        "device_type": "Printer"
+      }
+    ]
+  }
+}

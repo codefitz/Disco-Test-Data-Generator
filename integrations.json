@@ -1,0 +1,50 @@
+  {
+      "SQLQueries": [
+            {
+                "_hash": "81a5cba92ce5d9428cf3f82f4bac3c25",
+                "connection_parameter_address": "192.168.1.10",
+                "connection_parameter_database": "",
+                "connection_parameter_endpoint": "192.168.1.10",
+                "connection_parameter_port": 1433,
+                "endpoint": "031fa311793abb0fb297a60385b6c231",
+                "integration_point_name": "Microsoft SQL Server",
+                "label": "SELECT name AS database_name, compatibility_level, database_id FROM sys.databases",
+                "returned_attributes": [
+                    "database_name"
+                ]
+            },
+      "PatternDefines": [
+            {
+                "name": "Microsoft.SQLServer_Extended.MSSQLDetails.showDatabasesSelect",
+                "query_value": [
+                    "SELECT name AS database_name, compatibility_level, database_id FROM sys.databases"
+                ]
+            },
+    "SQLResultRows": [
+      {
+        "database_name": "master",
+        "endpoint": "031fa311793abb0fb297a60385b6c231",
+        "provider_hash": "81a5cba92ce5d9428cf3f82f4bac3c25"
+      },
+      {
+        "database_name": "model",
+        "endpoint": "031fa311793abb0fb297a60385b6c231",
+        "provider_hash": "81a5cba92ce5d9428cf3f82f4bac3c25"
+      },
+      {
+        "database_name": "Application",
+        "endpoint": "031fa311793abb0fb297a60385b6c231",
+        "provider_hash": "81a5cba92ce5d9428cf3f82f4bac3c25"
+      },
+      {
+        "database_name": "Logging_10",
+        "endpoint": "031fa311793abb0fb297a60385b6c231",
+        "provider_hash": "81a5cba92ce5d9428cf3f82f4bac3c25"
+    },
+      {
+        "database_name": "tempdb",
+        "endpoint": "031fa311793abb0fb297a60385b6c231",
+        "provider_hash": "81a5cba92ce5d9428cf3f82f4bac3c25"
+      }
+    ]
+  }

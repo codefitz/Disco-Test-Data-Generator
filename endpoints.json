@@ -1,0 +1,16 @@
+{
+  "endpoints": [
+    {
+      "endpoint": "3a6de8e78b05a9e7e957bc6774097f80",
+      "os_class": "UNIX"
+    },
+    {
+      "endpoint": "8a120ff3e2c86713f4d346d20f763ee7",
+      "os_class": "Windows"
+    },
+    {
+      "endpoint": "5f4a5551f044680c84c04ffb4cf141da",
+      "os_class": "Other"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "directories": [
+    {
+      "endpoint": "f4ee26964f6cbf23dcf7e7dabeb4c7a5",
+      "extra": [
+        null,
+        null,
+        null
+      ],
+      "file_type": [
+        "Character Device",
+        "Block Device",
+        "Block Device"
+      ],
+      "group": [
+        "root",
+        "disk",
+        "disk"
+      ],
+      "last_modified": [
+        "2020-01-91 07:13:36.067999847 -0600",
+        "2019-12-31 18:21:46.788964251 -0600",
+        "2019-12-22 12:49:01.899964251 -0600"
+      ],
+      "major": [
+        10,
+        253,
+        253
+      ],
+      "minor": [
+        60,
+        2,
+        3
+      ],
+      "mode": [
+        "0755",
+        "0660",
+        "0660"
+      ],
+      "name": [
+        "control",
+        "VolGroup00",
+        "VolGroup01"
+      ],
+      "owner": [
+        "babbob",
+        "root",
+        "root"
+      ],
+      "path": "/home/badbob",
+      "permission_string": [
+        null,
+        null,
+        null
+      ],
+      "permissions": [
+        [
+          "OwnerRead",
+          "OwnerWrite"
+        ],
+        [
+          "OwnerRead",
+          "OwnerWrite",
+          "GroupRead",
+          "GroupWrite"
+        ],
+        [
+          "OwnerRead",
+          "OwnerWrite",
+          "GroupRead",
+          "GroupWrite"
+        ]
+      ],
+      "size": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

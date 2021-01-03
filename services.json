@@ -1,0 +1,31 @@
+{
+  "services": [
+    {
+      "cmdline": [
+        "C:\\Windows\\system32\\svchost.exe -k netsvcs",
+        "D:\\Another\\Process.exe"
+      ],
+      "display_name": [
+        "Application Experience",
+        "Another Service"
+      ],
+      "endpoint": "3ca9508e0967979bb9a63e87cd46dc04",
+      "name": [
+        "Appinfo",
+        "Another Service"
+      ],
+      "pid": [
+        1088,
+        48
+      ],
+      "start_mode": [
+        "Manual",
+        "Auto"
+      ],
+      "state": [
+        "STOPPED",
+        "RUNNING"
+      ]
+    }
+  ]
+}

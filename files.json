@@ -1,0 +1,57 @@
+{
+  "files": [
+    {
+      "content": [
+        "This is the contents of a file.",
+        "This is another file.",
+        null
+      ],
+      "endpoint": "dd3bda4d1cfa57ba08c853bb43cae4f0",
+      "group": [
+        null,
+        null
+      ],
+      "last_modified": [
+        "02/19/2019 05:25 PM",
+        "01/01/2020 09:13 AM",
+        null
+      ],
+      "md5sum": [
+        "0b4f3274aa3a170335b53a5a352af69d",
+        "7cd050ee2cac5463cd0e258afdda0a51",
+        null
+      ],
+      "os_class": "Windows",
+      "owner": [
+        null,
+        null,
+        null
+      ],
+      "path": [
+        "c:\\Files\\onefile.txt",
+        "C:\\Files\\anotherfile.xml",
+        "C:\\File\\Does\\Not\\Exist.csv"
+      ],
+      "permission_string": [
+        null,
+        null,
+        null
+      ],
+      "permissions": [
+        null,
+        null,
+        null
+      ],
+      "size": [
+        489,
+        489,
+        null
+      ],
+      "type": [
+        null,
+        null,
+        null
+      ]
+    }
+  ]
+}

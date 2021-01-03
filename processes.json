@@ -1,0 +1,38 @@
+{
+  "processes": [
+    {
+      "cmd": [
+        "/a/process/command",
+        "/run/binary",
+        "/usr/python"
+      ],
+      "args": [
+        "--An --argument --string",
+        "--foreground",
+        "-c 'import ipaddress'"
+      ],
+      "endpoint": "3a6de8e78b05a9e7e957bc6774097f80",
+      "os_class": "UNIX",
+      "pid": [
+        101,
+        1766,
+        17869
+      ],
+      "ppid": [
+        1,
+        101,
+        1766
+      ],
+      "suppress_candidate_si": [
+        true,
+        null,
+        null
+      ],
+      "uid": [
+        999,
+        1000,
+        1000
+      ]
+    }
+  ]
+}

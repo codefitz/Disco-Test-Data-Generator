@@ -1,0 +1,295 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<demo>
+
+    <host>
+
+        <endpoint>ENDPOINT</endpoint>
+
+        <deviceinfo>
+            <attribute name="kind">KIND</attribute>
+            <attribute name="os_class">OS_CLASS</attribute>
+            <attribute name="platform">PLATFORM</attribute>
+            <attribute name="hostname">HOSTNAME</attribute>
+            <attribute name="last_access_method">LAST_ACCESS_METHOD</attribute>
+            <attribute name="domain">DOMAIN</attribute>
+            <attribute name="dns_domain">DNS_DOMAIN</attribute>
+            <attribute name="fqdn">FQDN</attribute>
+            <attribute name="os">OS</attribute>
+            <attribute name="os_vendor">VENDOR</attribute>
+            <attribute name="os_build">OS_BUILD</attribute>
+            <attribute name="os_version">OS_VERSION</attribute>
+            <attribute name="os_arch">OS_ARCH</attribute>
+            <attribute name="os_edition">OS_EDITION</attribute>
+            <attribute name="os_type">OS_TYPE</attribute>
+            <attribute name="device_type">DEVICE_TYPE</attribute>
+            <attribute name="__deviceInfo_via_unix_info" type="int">__DEVICEINFO_VIA_UNIX_INFO</attribute>
+            <attribute name="os_directory">OS_DIRECTORY</attribute>
+            <attribute name="service_pack" type="int">SERVICE_PACK</attribute>
+        </deviceinfo>
+
+        <command>
+            <attribute name="cmd">CMD</attribute>
+            <attribute name="result">RESULT</attribute>
+        </command>
+
+        <file>
+            <attribute name="path">PATH</attribute>
+            <attribute name="last_modified">LAST_MODIFIED</attribute>
+            <attribute name="md5sum">MD5SUM</attribute>
+            <attribute name="content">CONTENT</attribute>
+            <attribute name="type">TYPE</attribute>
+            <attribute name="permissions">PERMISSIONS</attribute>
+            <attribute name="size" type="int">SIZE</attribute>
+            <attribute name="group">GROUP</attribute>
+            <attribute name="owner">OWNER</attribute>
+            <attribute name="permissions_string">PERMISSIONS_STRING</attribute>
+        </file>
+
+        <macaddresslist>
+            <mac_addr>MAC_ADDR</mac_addr>
+        </macaddresslist>
+
+        <packagelist>
+            <package>
+                <attribute name="version">VERSION</attribute>
+                <attribute name="revision">REVISION</attribute>
+                <attribute name="description">DESCRIPTION</attribute>
+                <attribute name="name">NAME</attribute>
+            </package>
+        </packagelist>
+
+        <!-- WINDOWS ONLY-->
+        <patches>
+            <attribute name="checksum">CHECKSUM</attribute>
+            <attribute name="patches" type="list">[PATCHES]</attribute>
+        </patches>
+
+        <!-- WINDOWS ONLY-->
+        <registryvalue>
+            <attribute name="query">QUERY</attribute>
+            <attribute name="value" type="int">VALUE</attribute>
+            <attribute name="actual_query">ACTUAL_QUERY</attribute>
+        </registryvalue>
+
+        <hostinfo>
+            <attribute name="kernel">KERNEL</attribute>
+            <attribute name="uptime" type="int">UPTIME</attribute>
+            <attribute name="vendor">VENDOR</attribute>
+            <attribute name="uptimeSeconds" type="int">UPTIMESECONDS</attribute>
+            <attribute name="logical_ram" type="int">LOGICAL_RAM</attribute>
+            <attribute name="model">MODEL</attribute>
+            <attribute name="processor_type">PROCESSOR_TYPE</attribute>
+            <attribute name="serial">SERIAL</attribute>
+            <attribute name="ram" type="int">RAM</attribute>
+            <attribute name="uuid">UUID</attribute>
+            <attribute name="num_logical_processors" type="int">NUM_LOGICAL_PROCESSORS</attribute>
+            <attribute name="processor_speed" type="int">PROCESSOR_SPEED</attribute>
+            <attribute name="boot_time" type="date">BOOT_TIME</attribute>
+            <attribute name="cpu_threading_enabled" type="bool">CPU_THREADING_ENABLED</attribute>
+            <attribute name="num_processors" type="int">NUM_PROCESSORS</attribute>
+            <attribute name="cores_per_processor" type="int">CORES_PER_PROCESSOR</attribute>
+            <attribute name="threads_per_core" type="int">THREADS_PER_CORE</attribute>
+        </hostinfo>
+
+        <directorylisting>
+            <attribute name="path">PATH</attribute>
+            <directoryentry>
+                <attribute name="name">NAME</attribute>
+                <attribute name="last_modified">LAST_MODIFIED</attribute>
+                <attribute name="permissions" type="list">[PERMISSIONS]</attribute>
+                <attribute name="size" type="int">SIZE</attribute>
+                <attribute name="file_type">FILE_TYPE</attribute>
+                <attribute name="group">GROUP</attribute>
+                <attribute name="owner">OWNER</attribute>
+                <attribute name="permissions_string">PERMISSIONS_STRING</attribute>
+                <attribute name="mode">MODE</attribute>
+                <attribute name="major" type="int">MAJOR</attribute>
+                <attribute name="minor" type="int">MINOR</attribute>
+                <attribute name="extra">EXTRA</attribute>
+            </directoryentry>
+        </directorylisting>
+
+        <ipaddresslist>
+            <ipaddress>
+                <attribute name="broadcast">BROADCAST</attribute>
+                <attribute name="netmask">NETMASK</attribute>
+                <attribute name="address_type">ADDRESS_TYPE</attribute>
+                <attribute name="ip_addr">IP_ADDR</attribute>
+                <attribute name="interface_id">INTERFACE_ID</attribute>
+                <attribute name="site_local" type="bool">SITE_LOCAL</attribute>
+                <attribute name="prefix">PREFIX</attribute>
+                <attribute name="prefix_length" type="int">PREFIX_LENGTH</attribute>
+                <attribute name="link_local" type="bool">LINK_LOCAL</attribute>
+                <attribute name="prefix_len" type="int">PREFIX_LEN</attribute>
+            </ipaddress>
+        </ipaddresslist>
+
+        <networkinterfacelist>
+            <networkinterface>
+                <attribute name="name">NAME</attribute>
+                <attribute name="interface_id">INTERFACE_ID</attribute>
+                <attribute name="mac_addr">MAC_ADDR</attribute>
+                <attribute name="ifindex" type="int">IFINDEX</attribute>
+                <attribute name="description">DESCRIPTION</attribute>
+                <attribute name="speed" type="int">SPEED</attribute>
+                <attribute name="negotiation">NEGOTIATION</attribute>
+                <attribute name="service_name">SERVICE_NAME</attribute>
+                <attribute name="driver_version">DRIVER_VERSION</attribute>
+                <attribute name="dns_hostname">DNS_HOSTNAME</attribute>
+                <attribute name="index" type="int">INDEX</attribute>
+                <attribute name="setting_id">SETTING_ID</attribute>
+                <attribute name="device_id">DEVICE_ID</attribute>
+                <attribute name="database_path">DATABASE_PATH</attribute>
+                <attribute name="adapter_type">ADAPTER_TYPE</attribute>
+                <attribute name="dhcp_enabled" type="bool">DHCP_ENABLED</attribute>
+                <attribute name="driver_date">DRIVER_DATE</attribute>
+                <attribute name="manufacturer">MANUFACTURER</attribute>
+                <attribute name="dns_servers" type="list">[DNS_SERVERS]</attribute>
+                <attribute name="primary_wins_server">PRIMARY_WINS_SERVER</attribute>
+                <attribute name="default_gateway" type="list">[DEFAULT_GATEWAY]</attribute>
+                <attribute name="secondary_wins_server">SECONDARY_WINS_SERVER</attribute>
+            </networkinterface>
+        </networkinterfacelist>
+
+        <wmiquery>
+            <attribute name="query">QUERY</attribute>
+            <attribute name="namespace">NAMESPACE</attribute>
+            <attribute name="returned_attributes" type="list">[RETURNED_ATTRIBUTES]</attribute>
+            <wmi>
+                <attribute name="Attribute">VALUE</attribute>
+            </wmi>
+        </wmiquery>
+
+        <fqdn>
+            <attribute name="ip_addr">IP_ADDR</attribute>
+            <fqdn>
+                <attribute name="fqdn">FQDN</attribute>
+            </fqdn>
+        </fqdn>
+
+        <filesystemlist>
+            <filesystem>
+                <attribute name="name">NAME</attribute>
+                <attribute name="used" type="int">USED</attribute>
+                <attribute name="mount">MOUNT</attribute>
+                <attribute name="fs_type">FS_TYPE</attribute>
+                <attribute name="fs_kind">FS_KIND</attribute>
+                <attribute name="size" type="int">SIZE</attribute>
+                <attribute name="serial">SERIAL</attribute>
+                <attribute name="comment">COMMENT</attribute>
+            </filesystem>
+        </filesystemlist>
+
+        <!-- WINDOWS ONLY-->
+        <hbainfolist>
+            <hba>
+                <attribute name="role">ROLE</attribute>
+                <attribute name="speed" type="int">SPEED</attribute>
+                <attribute name="driver_version">DRIVER_VERSION</attribute>
+                <attribute name="manufacturer">MANUFACTURER</attribute>
+                <attribute name="WWNN">WWNN</attribute>
+                <attribute name="firmware">FIRMWARE</attribute>
+                <attribute name="supported_speeds" type="list">[SUPPORTED_SPEEDS]</attribute>
+                <attribute name="boardID">BOARDID</attribute>
+                <attribute name="port_state">PORT_STATE</attribute>
+                <attribute name="port_type">PORT_TYPE</attribute>
+                <attribute name="WWPN">WWPN</attribute>
+                <attribute name="model_description">MODEL_DESCRIPTION</attribute>
+                <attribute name="model_name">MODEL_NAME</attribute>
+                <attribute name="supported_classes" type="list">[SUPPORTED_CLASSES]</attribute>
+                <attribute name="fabric_name">FABRIC_NAME</attribute>
+                <attribute name="option_rom_version">OPTION_ROM_VERSION</attribute>
+                <attribute name="serial_number">SERIAL_NUMBER</attribute>
+                <attribute name="driver_name">DRIVER_NAME</attribute>
+            </hba>
+        </hbainfolist>
+
+        <networkconnectionlist>
+            <attribute name="listening_count" type="int">LISTENING_COUNT</attribute>
+            <attribute name="connected_count" type="int">CONNECTED_COUNT</attribute>
+            <networkconnection>
+                <attribute name="state">STATE</attribute>
+                <attribute name="cmd">CMD</attribute>
+                <attribute name="pid" type="int">PID</attribute>
+                <attribute name="uid" type="int">UID</attribute>
+                <attribute name="protocol">PROTOCOL</attribute>
+                <attribute name="local_port" type="int">LOCAL_PORT</attribute>
+                <attribute name="local_ip_addr">LOCAL_IP_ADDR</attribute>
+                <attribute name="remote_port" type="int">REMOTE_PORT</attribute>
+                <attribute name="remote_ip_addr">REMOTE_IP_ADDR</attribute>
+            </networkconnection>
+            <listeningport>
+                <attribute name="pid" type="int">PID</attribute>
+                <attribute name="protocol">PROTOCOL</attribute>
+                <attribute name="local_port" type="int">LOCAL_PORT</attribute>
+                <attribute name="local_ip_addr">LOCAL_IP_ADDR</attribute>
+            </listeningport>
+        </networkconnectionlist>
+
+        <processlist>
+            <attribute name="full_cmdline" type="bool">FULL_CMDLINE</attribute>
+            <process>
+                <attribute name="username">USERNAME</attribute>
+                <attribute name="cmd">CMD</attribute>
+                <attribute name="args">ARGS</attribute>
+                <attribute name="ppid" type="int">PPID</attribute>
+                <attribute name="pid" type="int">PID</attribute>
+                <attribute name="uid" type="int">UID</attribute>
+                <attribute name="suppress_candidate_si" type="bool">SUPPRESS_CANDIDATE_SI</attribute>
+            </process>
+        </processlist>
+
+        <!--WINDOWS ONLY-->
+
+        <registrylisting>
+            <attribute name="query">QUERY</attribute>
+            <registryentry>
+                <attribute name="name">NAME</attribute>
+                <attribute name="key_type">KEY_TYPE</attribute>
+                <attribute name="data_type">DATA_TYPE</attribute>
+            </registryentry>
+        </registrylisting>
+
+        <!--WINDOWS ONLY-->
+
+        <servicelist>
+            <service>
+                <attribute name="name">NAME</attribute>
+                <attribute name="username">USERNAME</attribute>
+                <attribute name="state">STATE</attribute>
+                <attribute name="display_name">DISPLAY_NAME</attribute>
+                <attribute name="start_mode">START_MODE</attribute>
+                <attribute name="cmdline">CMDLINE</attribute>
+                <attribute name="pid" type="int">PID</attribute>
+            </service>
+        </servicelist>
+
+        <provider type="SQL">
+            <integrationresult>
+                <details>
+                    <attribute name="label">LABEL</attribute>
+                    <attribute name="_hash">HASH</attribute>
+                    <attribute name="_tw_meta_data_attrs" type="list">[_TW_META_DATA_ATTRS]</attribute>
+                    <attribute name="connection_parameter_endpoint">CONNECTION_PARAMETER_ENDPOINT</attribute>
+                    <attribute name="connection_parameter_port">CONNECTION_PARAMETER_PORT</attribute>
+                    <attribute name="query_name">QUERY_NAME</attribute>
+                    <attribute name="integration_point_name">INTEGRATION_POINT_NAME</attribute>
+                    <attribute name="connection_parameter_database">CONNECTION_PARAMETER_DATABASE</attribute>
+                    <attribute name="connection_parameter_address" type="none">CONNECTION_PARAMETER_ADDRESS</attribute>
+                    <attribute name="returned_attributes" type="list">[RETURNED_ATTRIBUTES]</attribute>
+                    <attribute name="provider">PROVIDER</attribute>
+                    <attribute name="credential_id">CREDENTIAL_ID</attribute>
+                </details>
+                    <integrationrow>
+                        <attribute name="database_name">DATABASE_NAME</attribute>
+                    </integrationrow>
+            </integrationresult>
+        </provider>
+
+    </host>
+
+
+    </host>
+
+</demo>

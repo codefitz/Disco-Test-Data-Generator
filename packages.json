@@ -1,0 +1,23 @@
+{
+  "packages": [
+    {
+      "endpoint": "3a6de8e78b05a9e7e957bc6774097f80",
+      "description": [
+        "A utility for getting files from remote servers (FTP, HTTP, and others)",
+        "The RPM package management system",
+        "A text file browser similar to more, but better"
+      ],
+      "name": [
+        "curl",
+        "rpm",
+        "grep"
+      ],
+      "os_class": "UNIX",
+      "revision": [
+        "7.29.0.rhel7",
+        "4.11.3",
+        "2.20"
+      ]
+    }
+  ]
+}
