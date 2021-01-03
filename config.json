@@ -106,7 +106,7 @@
       "TVRS\\badjenny"
     ]
   },
-  "hosts": 1,
+  "hosts": 100,
   "os_class": [
     "Windows",
     "UNIX"
