@@ -2,16 +2,20 @@
 
 License: GPLv3 (please share and contribute back)
 
-Generate some random playback data for BMC Discovery
+Extract, Dump and Generate random Playback data for BMC Discovery.
 
 Requires
 --------
 * Python 3
-* Pip Install: python-generate-mac
-* Pip Install: faker
+* Pip Install: python-generate-mac (generate_dml)
+* Pip Install: faker (generate_dml)
 
-Quickstart
-----------
+Extract and Dump
+----------------
+* Use get_dml.py and dump_dml.py to extract DML playback data from an appliance.
+
+Generate DML Quickstart
+-----------------------
 1. Generate the test data file:
     `./generate_dml.py -f <config file>`
 2. copy hosts.dml to Discovery Appliance

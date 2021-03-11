@@ -142,7 +142,7 @@ argv = sys.argv[1:] # Additional Args
 file = None
 
 parser = argparse.ArgumentParser(description='Generate a DML file for use in BMC Discovery for generating Playback data.')
-parser.add_argument('-f', '--file', dest='file',  type=file, required=True, metavar='JSON_FILE', help='The json input file for this script.\n')
+parser.add_argument('-f', '--file', dest='file', type=file, required=True, metavar='JSON_FILE', help='The json input file for this script.\n')
 
 args = parser.parse_args()
 file = args.file
