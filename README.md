@@ -1,64 +1,100 @@
-# Disco Test Data
+# Disco Test Data Generation
 
 License: GPLv3 (please share and contribute back)
 
-Extract, Dump and Generate random Playback data for BMC Discovery.
+Extract, Dump and anonymise Playback data for BMC Discovery.
 
 Requires
 --------
 * Python 3
-* Pip Install: python-generate-mac (generate_dml)
-* Pip Install: faker (generate_dml)
+* Pip Install: python-generate-mac (scramble)
+* Pip Install: faker (scramble)
 
-Extract and Dump
+Extract DML Data
 ----------------
-* Use get_dml.py and dump_dml.py to extract DML playback data from an appliance.
+### Usage
 
-Generate DML Quickstart
------------------------
-1. Generate the test data file:
-    `./generate_dml.py -f <config file>`
-2. copy hosts.dml to Discovery Appliance
-3. From the Discovery Appliance Run:
+    get_dml.py [-h] -u USERNAME [-z] [-e] [-m] [-b] [-c] -s QUERY
+
+    Extract appliance data in DML format. This will be automatically exported to /tmp/data.dml
+
+    optional arguments:
+	-h, --help            show this help message and exit
+	-u USERNAME, --username USERNAME, The appliance login user.
+	-z, --zip             Zip the DML file.
+	-e, --encrypt         Encrypt the DML file.
+	-m, --md5             Display md5 hash sum of the DML file.
+	-b, --b64             Output encrypted DML file to base64. Use with -e flag.
+	-c, --compress        Compress the DML file. Use with -e flag.
+	-s QUERY, --search QUERY, The search query of nodes to export.
+
+#### Examples
+
+* Export DML with md5 hash of all NetworkDevice nodes
+
+      python3 get_dml.py -u system -m --search "search NetworkDevice"
+
+* Encrypted and compress a DML file of Windows Hosts
+
+      python3 get_dml.py -u system -e -c --search "search Host where os_type = 'Windows'"
+
+Dump DML Data (encrypted)
+-------------------------
+Encrypyed and/or compressed data.dml file will need to be decrypted and/or decompressed before import.
+
+### Usage
+
+    dump_dml.py [-h] [-f FILENAME] [-d] [-b] [-c]
+
+    Dump DML data.
+
+    optional arguments:
+	-h, --help            show this help message and exit
+	-f FILENAME, --file FILENAME, Input file containing GPG, DML or Hash.
+	-d, --decrypt         Decrypt the DML file.
+	-b, --bhash           Convert base64 hash.
+	-c, --compressed      Decompressed data string.
+
+### Examples
+
+* Decrypt a gpg DML file
+
+      python3 dump_dml.py -f data.gpg -d
+
+* Convert a Base64 hashed DML string
+
+      python3 dump_dml.py -f data.dml -b
+
+Anonymise Data
+--------------
+Use this script to anonymise (scramble) hostnames, ip addresses, mac addresses and usernames. This script does not garuantee full anonymity and protection - sensitive data may be captured in process arguments and other unexpected attribute fields.
+
+### Usage
+
+    scramble_dml.py [-h] -f DML FILE
+
+    Anonymise and obsfucate DML data. Replaces IP Addresses, MAC Addresses, Hostnames
+
+    optional arguments:
+	-h, --help            show this help message and exit
+	-f DML FILE, --file DML FILE, The DML file for this script.
+
+### Example
+
+* Scramble data.dml Host data
+
+      python3 scramble_dml.py -f data.dml
+
+Deploy/Import
+-------------
+1. copy data.dml to Discovery Appliance
+2. From the Discovery Appliance Run:
     `tw_dml_generate -u system --verbose -d <location of DML file>`
-4. Run a playback scan against the test IP ranges
+3. Run a playback scan against IP ranges
+
 
 More Information
 ----------------
-This is an *alpha release* script to generate partial Host data for playback on a
-Demo Discovery Appliance.
+These scripts use undocumented commands on a Discovery Appliance to extract, encrypt and anonymise DML data for use in Playback. You should only use them if you are familiar with how Discovery Playback works with Pool and Record data.
 
-The data is made up from semi-random values and imported values that can either
-be generated manually, or tweaked from a Discovery API export.
-
-It would require a lot of effort to generate fully automated/random test data,
-so for quick results, you can export the following DDD from Discovery into the
-JSON formatted templates provided.
-
-Some placeholder data is provided to give you an idea of what the file should look like, but it closely resembles output from the Discovery API. In order to get embedded list results, you would need to pivot from a 'Result List' node use key expressions to the DDD. So for example, to get a list of DiscoveredProcesses you would use the following query:
-
-	search ProcessList with (traverse DiscoveryResult:DiscoveryAccessResult:DiscoveryAccess:DiscoveryAccess as DA), (traverse List:List:Member:DiscoveredProcess as DP) show #DA.endpoint as 'endpoint', #DP.cmd as 'cmd', #DP.args as 'args', #DP.username as 'username', #DP.pid as 'pid' process with unique(0)
-
-The grouped column results are always displayed in the same order across columns, so you can then reference these in the Python JSON library using an for loop index.
-
-The input data requires you to provide a hashed list (endpoints) to use as a
-key. This will allow for raw data and software communication to be preserved.
-
-* Discovered Command Results
-* Discovered Files
-* Discovered Directories
-* Packages
-* Patches
-* Registry Queries
-* WMI Queries
-* Network Interfaces/Connections
-* Discovered Processes
-* Discovered Services
-* Integration Results (SQL)
-* Discovered HBAs
-
-Some values can be null, but others are required (most are obvious). I haven't
-had the time to do extensive testing so it's trial and error when you run the
-`tw_dml_generate` command. As far as I can tell though, it only checks for data
-validity, it doesn't do any consistency checks so you can have data that does
-not match e.g. a filesystem size that is smaller than it's used size.
+The scripts themselves may be buggy, please submit any bugs using the Issues tab, or better yet submit a fix and pull request.

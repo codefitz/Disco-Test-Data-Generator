@@ -20,6 +20,8 @@ import argparse
 import zipfile
 import base64
 import hashlib
+import zlib
+import binascii
 
 pwd = os.getcwd()
 
@@ -32,13 +34,16 @@ logger.info("Dumping...")
 ### Capture Arguments
 argv = sys.argv[1:] # Additional Args
 
-parser = argparse.ArgumentParser(description='Dump an encrypted DML file.')
+parser = argparse.ArgumentParser(description='Dump DML data.')
 parser.add_argument('-f', '--file', dest='file', type=str,
                     required=False, metavar="FILENAME",
-                    help='The GPG encrypted DML file.\n')
-parser.add_argument('-b', '--bhash', dest='bfile', type=str,
-                    required=False, metavar="FILENAME",
-                    help='A file containing base64 hash.\n')
+                    help='Input file containing GPG, DML or Hash.\n')
+parser.add_argument('-d', '--decrypt', dest='dfile', default=False,
+                    action='store_true', help='Decrypt the DML file.\n')
+parser.add_argument('-b', '--bhash', dest='bfile', default=False,
+                    action='store_true', help='Convert base64 hash.\n')
+parser.add_argument('-c', '--compressed', dest='cfile', default=False,
+                    action='store_true', help='Decompressed data string.\n')
 
 args = parser.parse_args()
 if not (args.file or args.bfile):
@@ -47,8 +52,16 @@ if not (args.file or args.bfile):
     logger.error(msg)
     sys.exit(1)
 
-gpg = args.file
+file = args.file
+filed = args.dfile
 fileh = args.bfile
+filec = args.cfile
+
+if not file:
+    msg = "Nothing to dump."
+    print(msg)
+    logger.error(msg)
+    sys.exit(1)
 
 passwd = getpass.getpass(prompt='Passphrase: ')
 if not passwd:
@@ -57,26 +70,46 @@ if not passwd:
     logger.error(msg)
     sys.exit(1)
 
-if not gpg:
-    if not fileh:
-        msg = "Nothing to dump."
-        print(msg)
-        logger.error(msg)
-        sys.exit(1)
-    with open(fileh, "r") as bhash:
-        gpg=os.path.join(os.path.dirname(sys.argv[0]), "dml.gpg")
+if fileh:
+    msg = "Converting from Hash..."
+    print(msg)
+    with open(file, "r") as bhash:
+        if filed:
+            ext="data.gpg"
+        else:
+            ext="data.dml"
+        path=os.path.join(pwd, ext)
         decoded=base64.b64decode(bhash.read())
-        outf = open(gpg, 'wb')
+        outf = open(path, 'wb')
         outf.write(decoded)
         outf.close()
+elif filec:
+    msg = "Decompressing..."
+    print(msg)
+    with open(file, "r") as compacted:
+        if filed:
+            ext="data.gpg"
+        else:
+            ext="data.dml"
+        path=os.path.join(pwd, ext)
+        decompressed = zlib.decompress(binascii.unhexlify(compacted.read()))
+        outf = open(path, 'wb')
+        outf.write(decompressed)
+        outf.close()
 
-if os.path.isfile(gpg):
+if filed:
    try:
-        os.system('echo "%s" | gpg -d --batch --yes --quiet --no-mdc-warning --passphrase-fd 0 -o %s --decrypt %s' % (passwd, pwd+"/dml.xml", gpg))
-        os.remove(gpg)
-        msg = "DML successfully decrypted!"
-        print(msg)
-        logger.info(msg)
+        exitcode = os.system('echo "%s" | gpg -d --batch --yes --quiet --ignore-mdc-error --passphrase-fd 0 -o %s --decrypt %s' % (passwd, pwd+"/data.dml", file))
+        if exitcode == 0:
+            msg = "DML successfully decrypted!"
+            print(msg)
+            logger.info(msg)
+            os.remove(file)
+        else:
+            msg = "Problem with decrypting file: Exit Code %d" % exitcode
+            print(msg)
+            logger.critical(msg)
+            sys.exit(1)
    except Exception as e:
         msg = "Problem with file!\n"
         print(msg + str(e))
