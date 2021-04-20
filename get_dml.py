@@ -75,6 +75,9 @@ else:
     print(msg)
     logger.info(msg)
 
+# Sanitization
+passwd = passwd.replace("(","\(").replace(")","\)").replace("$","\$")
+
 cmd = 'tw_dml_extract -u %s -p %s -o %s "%s"' % (user, passwd, dml, query)
 
 try:
