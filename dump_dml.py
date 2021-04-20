@@ -70,6 +70,9 @@ if not passwd:
     logger.error(msg)
     sys.exit(1)
 
+# Sanitization
+passwd = passwd.replace("(","\(").replace(")","\)").replace("$","\$")
+
 if fileh:
     msg = "Converting from Hash..."
     print(msg)
