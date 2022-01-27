@@ -48,11 +48,11 @@ argv = sys.argv[1:] # Additional Args
 
 parser = argparse.ArgumentParser(description='Extract appliance data in DML format.\nThis will be automatically exported to %s' % (dml))
 parser.add_argument('-u', '--username', dest='username',  type=str, required=True, help='The appliance login user.\n')
-parser.add_argument('-z', '--zip', dest='zippit', default=False, action='store_true', help='Zip the DML file.')
-parser.add_argument('-e', '--encrypt', dest='encrypt', default=False, action='store_true', help='Encrypt the DML file.')
-parser.add_argument('-m', '--md5', dest='md5hash', default=False, action='store_true', help='Display md5 hash sum of the DML file.')
-parser.add_argument('-b', '--b64', dest='encode', default=False, action='store_true', help='Output encrypted DML file to base64. Use with -e flag.')
-parser.add_argument('-c', '--compress', dest='compress', default=False, action='store_true', help='Compress the DML file. Use with -e flag.')
+parser.add_argument('-z', '--zip', dest='zippit', default=False, action='store_true', help='Extract and Zip the DML file.')
+parser.add_argument('-e', '--encrypt', dest='encrypt', default=False, action='store_true', help='Extract and Encrypt the DML file.')
+parser.add_argument('-m', '--md5', dest='md5hash', default=False, action='store_true', help='Display an md5 hash sum of the DML file.')
+parser.add_argument('-b', '--b64', dest='encode', default=False, action='store_true', help='Output DML file to base64.')
+parser.add_argument('-c', '--compress', dest='compress', default=False, action='store_true', help='Output DML file to a compression string.')
 parser.add_argument('-s', '--search', dest='query', type=str, required=True, help='The search query of nodes to export.\n')
 
 args = parser.parse_args()
@@ -139,6 +139,7 @@ if os.path.isfile(dml):
             msg = "Problem with encrypting!\n"
             print(msg + str(e))
             logger.error(msg + str(e))
+            sys.exit(1)
     if encode:
         msg = "Encoding..."
         print(msg)

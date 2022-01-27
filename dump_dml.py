@@ -39,11 +39,11 @@ parser.add_argument('-f', '--file', dest='file', type=str,
                     required=False, metavar="FILENAME",
                     help='Input file containing GPG, DML or Hash.\n')
 parser.add_argument('-d', '--decrypt', dest='dfile', default=False,
-                    action='store_true', help='Decrypt the DML file.\n')
+                    action='store_true', help='File is encrypted DML file.\n')
 parser.add_argument('-b', '--bhash', dest='bfile', default=False,
-                    action='store_true', help='Convert base64 hash.\n')
+                    action='store_true', help='File contains base64 hash.\n')
 parser.add_argument('-c', '--compressed', dest='cfile', default=False,
-                    action='store_true', help='Decompressed data string.\n')
+                    action='store_true', help='File contains compressed data string.\n')
 
 args = parser.parse_args()
 if not (args.file or args.bfile):
