@@ -173,12 +173,10 @@ with open(file, 'r') as f:
                 fakeHostN = "%s%s-%i" % (hostHash, random.choice(envs), random.randint(1,9))
                 hostSwaps, uniqHosts = substitutes(fakeHostN, hostname, uniqHosts, hostSwaps)
         usernames = findMatch(line, "attribute\sname=\"username\">(.+)<")
-        username = None
-        if username:
-            u1 = username.group(1)
-            u1.replace('"', '')
-            u1.replace("'", "")
-            usernames.append(u1)
+        if usernames:
+            username = usernames[0]
+            username = username.replace('"', '').replace("'", "")
+            usernames = [username]
         for user in usernames:
             if user and user not in genericUsers:
                 if user.lower() == "name":
