@@ -102,17 +102,35 @@ elif filec:
 
 if filed:
    try:
-        exitcode = os.system('echo "%s" | gpg -d --batch --yes --quiet --ignore-mdc-error --passphrase-fd 0 -o %s --decrypt %s' % (passwd, pwd+"/data.dml", file))
-        if exitcode == 0:
+        proc = subprocess.run(
+            [
+                "gpg",
+                "-d",
+                "--batch",
+                "--yes",
+                "--quiet",
+                "--ignore-mdc-error",
+                "--passphrase-fd",
+                "0",
+                "-o",
+                os.path.join(pwd, "data.dml"),
+                "--decrypt",
+                file,
+            ],
+            input=passwd.encode(),
+            capture_output=True,
+        )
+        if proc.returncode == 0:
             msg = "DML successfully decrypted!"
             print(msg)
             logger.info(msg)
             os.remove(file)
         else:
-            msg = "Problem with decrypting file: Exit Code %d" % exitcode
+            msg = f"Problem with decrypting file: Exit Code {proc.returncode}"
             print(msg)
             logger.critical(msg)
-            sys.exit(1)
+            logger.error(proc.stderr.decode())
+            sys.exit(proc.returncode)
    except Exception as e:
         msg = "Problem with file!\n"
         print(msg + str(e))
