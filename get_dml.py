@@ -130,7 +130,28 @@ if os.path.isfile(dml):
         msg = "Encrypting DML File..."
         print(msg)
         try:
-            os.system('echo %s | gpg --yes --batch --quiet --passphrase-fd 0 -o %s -c %s' % (passwd, gpg, dml))
+            proc = subprocess.run(
+                [
+                    "gpg",
+                    "--yes",
+                    "--batch",
+                    "--quiet",
+                    "--passphrase-fd",
+                    "0",
+                    "-o",
+                    gpg,
+                    "-c",
+                    dml,
+                ],
+                input=passwd.encode(),
+                capture_output=True,
+            )
+            if proc.returncode != 0:
+                msg = f"Problem with encrypting! Return code {proc.returncode}"
+                print(msg)
+                logger.error(msg)
+                logger.error(proc.stderr.decode())
+                sys.exit(proc.returncode)
             os.remove(dml)
             msg = "DML successfully encrytped using appliance passphrase!"
             print(msg)
