@@ -92,15 +92,15 @@ logger = logging.getLogger(__name__)
 logger.info("Script started.")
 
 ### Capture Arguments
-file = None
+file_path = None
 
 parser = argparse.ArgumentParser(description='Anonymise and obsfucate DML data.\nReplaces IP Addresses, MAC Addresses, Hostnames')
-parser.add_argument('-f', '--file', dest='file', type=file, required=True, metavar='DML FILE', help='The DML file for this script.\n')
+parser.add_argument('-f', '--file', dest='file_path', type=str, required=True, metavar='DML FILE', help='The DML file for this script.\n')
 
 args = parser.parse_args()
-file = args.file
+file_path = args.file_path
 
-fileExists(file)
+fileExists(file_path)
 
 ipSwaps = []
 macSwaps = []
@@ -126,13 +126,13 @@ genericUsers = [ 'NT AUTHORITY\\SYSTEM',
 newDML = open("scrambled.dml","w")
 usernameFile = open("usernames.log","w")
 
-wc = len(open(file).readlines())
+wc = len(open(file_path).readlines())
 print("No. of lines in file: %i" % wc)
 if float(wc) > 500000:
     print("Warning: This may take a while...")
 
 # Setup Value Swaps
-with open(file, 'r') as f:
+with open(file_path, 'r') as f:
     c = 0
     for line in f.readlines():
         c += 1
@@ -169,12 +169,10 @@ with open(file, 'r') as f:
                 fakeHostN = "%s%s-%i" % (hostHash, random.choice(envs), random.randint(1,9))
                 hostSwaps, uniqHosts = substitutes(fakeHostN, hostname, uniqHosts, hostSwaps)
         usernames = findMatch(line, "attribute\sname=\"username\">(.+)<")
-        username = None
-        if username:
-            u1 = username.group(1)
-            u1.replace('"', '')
-            u1.replace("'", "")
-            usernames.append(u1)
+        if usernames:
+            username = usernames[0]
+            username = username.replace('"', '').replace("'", "")
+            usernames = [username]
         for user in usernames:
             if user and user not in genericUsers:
                 if user.lower() == "name":
@@ -187,7 +185,7 @@ usernameFile.write(str(userSwaps))
 
 print("\n100%")
 # Replace Values
-with open(file, 'r') as f:
+with open(file_path, 'r') as f:
     c = 0
     for line in f.readlines():
         old_line = line
