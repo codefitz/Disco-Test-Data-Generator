@@ -127,7 +127,6 @@ newDML = open("scrambled.dml","w")
 usernameFile = open("usernames.log","w")
 
 wc = len(open(file).readlines())
-stopgap = wc + 1 # stopgap for testing
 print("No. of lines in file: %i" % wc)
 if float(wc) > 500000:
     print("Warning: This may take a while...")
@@ -139,9 +138,6 @@ with open(file, 'r') as f:
         c += 1
         pc = (float(c) / float(wc))
         print('Processing: line %s (%d%%)' % (c,100.0 * pc),end='\r')
-        if c == stopgap:
-            print("\nTesting stopgap.")
-            break
 
         ipAddrs = findMatch(line, "[^\d](\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})[^\d]")
         for ipAddr in ipAddrs:
@@ -197,9 +193,6 @@ with open(file, 'r') as f:
         old_line = line
         c += 1
         pc = (float(c) / float(wc))
-        if c == stopgap:
-            print("\nTest data finished.")
-            break
         # Exact matches
         line = swap(line, "[^\d](\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})[^\d]", ipSwaps)
         line = swap(line, "(([0-9a-fA-F]{0,4}:)+[0-9a-fA-F]{1,4})", ipSwaps)
