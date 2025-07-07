@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Generate a DML file for use in BMC Discovery for generating Playback data
 #
@@ -55,7 +55,7 @@ def makeSerial(count):
 def fileExists(file):
     exists = os.path.isfile(file)
     if not exists:
-        msg = "Ficonnectionsle '%s' does not exist!" % file
+        msg = "File '%s' does not exist!" % file
         print(msg)
         logger.critical(msg)
         sys.exit(1)
